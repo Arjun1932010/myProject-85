@@ -1,5 +1,5 @@
 canvas = document.getElementById('myCanvas');
-ctx = canvas.getContext('2d');
+ctx = canvas.getContext("2d");
 
 greencar_width=75;
 greencar_height=100;
@@ -65,7 +65,7 @@ function my_keydown(e)
 
 function up()
 {
-	if(greencar_y>=0){
+	if(greencar_y>=50){
 		greencar_y=greencar_y-10;
 		console.log("When up arrow is pressed, x="+greencar_x+"y="+greencar_y);
 		uploadBackground();
@@ -75,28 +75,29 @@ function up()
 
 function down()
 {
-	if(greencar_y<=0){
+	if(greencar_y<=250){
 		greencar_y=greencar_y+10;
 		console.log("When down arrow is pressed, x="+greencar_x+"y="+greencar_y);
 		uploadBackground();
 		uploadgreencar();
 }
-
+}
 function left()
 {
-    if(greencar_x>=0){
-		greencar_x=greencar_x+10;
-		console.log("When up arrow is pressed, x="+greencar_x+"y="+greencar_y);
-		uploadBackground();
-		uploadgreencar();
-}
-
-function right()
-{
-	if(greencar_x<=0){
+    if(greencar_x>=50){
 		greencar_x=greencar_x-10;
 		console.log("When up arrow is pressed, x="+greencar_x+"y="+greencar_y);
 		uploadBackground();
 		uploadgreencar();
 }
+}
+
+function right()
+{
+	if(greencar_x<=750){
+		greencar_x=greencar_x+10;
+		console.log("When up arrow is pressed, x="+greencar_x+"y="+greencar_y);
+		uploadBackground();
+		uploadgreencar();
+	}
 }
